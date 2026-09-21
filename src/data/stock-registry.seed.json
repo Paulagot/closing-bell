@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "stocks": {
+    "INTC": {
+      "name": "Intel Corporation",
+      "refSymbol": "INTC",
+      "assetType": "public_stock",
+      "exchange": "NASDAQ",
+      "issuers": {
+        "xStocks": {
+          "symbol": "INTCx",
+          "mint": "XshPgPdXFRWB8tP1j82rebb2Q9rPgGX37RuqzohmArM",
+          "decimals": 8,
+          "multiplierMode": "xstocks",
+          "enabled": true
+        },
+        "Backpack": {
+          "symbol": "INTC",
+          "mint": "iNTCy1qTsUEZQe3DSocLz1ZXXai34Gdw8THQh5rxFaF",
+          "decimals": 6,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        },
+        "Ondo": {
+          "symbol": "INTCon",
+          "mint": "cJpUMp5R7rZ6fGeLHbHhrRuJzK9mkyKDjZqNpT3ondo",
+          "decimals": 9,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        }
+      },
+      "enabled": true
+    },
+    "HOOD": {
+      "name": "Robinhood Markets, Inc.",
+      "refSymbol": "HOOD",
+      "assetType": "public_stock",
+      "exchange": "NASDAQ",
+      "issuers": {
+        "xStocks": {
+          "symbol": "HOODx",
+          "mint": "XsvNBAYkrDRNhA7wPHQfX3ZUXZyZLdnCQDfHZ56bzpg",
+          "decimals": 8,
+          "multiplierMode": "xstocks",
+          "enabled": true
+        },
+        "Backpack": {
+          "symbol": "HOOD",
+          "mint": "HooDYv5RewLRiMLnEVq3VJqdqxhuE6c5eYvqejMC3e9A",
+          "decimals": 6,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        },
+        "Ondo": {
+          "symbol": "HOODon",
+          "mint": "BVdXGvmgi6A9oAiwWvBvP76fyTqcCNRJMM7zMN6ondo",
+          "decimals": 9,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        }
+      },
+      "enabled": true
+    },
+    "MSTR": {
+      "name": "Strategy Inc.",
+      "refSymbol": "MSTR",
+      "assetType": "public_stock",
+      "exchange": "NASDAQ",
+      "issuers": {
+        "xStocks": {
+          "symbol": "MSTRx",
+          "mint": "XsP7xzNPvEHS1m6qfanPUGjNmdnmsLKEoNAnHjdxxyZ",
+          "decimals": 8,
+          "multiplierMode": "xstocks",
+          "enabled": true
+        },
+        "Backpack": {
+          "symbol": "MSTR",
+          "mint": "MSTRdWXMeZxdE8osAQy3fA4rvTY5rgummDSMEx6U7Nz",
+          "decimals": 6,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        },
+        "Ondo": {
+          "symbol": "MSTRon",
+          "mint": "FSz4ouiqXpHuGPcpacZfTzbMjScoj5FfzHkiyu2ondo",
+          "decimals": 9,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        }
+      },
+      "enabled": true
+    },
+    "MU": {
+      "name": "Micron Technology, Inc.",
+      "refSymbol": "MU",
+      "assetType": "public_stock",
+      "exchange": "NASDAQ",
+      "issuers": {
+        "xStocks": {
+          "symbol": "MUx",
+          "mint": "XsQLZycSZ7QnBBdBXQaTbQdiUcbRqjNJgyBGAMzhHav",
+          "decimals": 8,
+          "multiplierMode": "xstocks",
+          "enabled": true
+        },
+        "Backpack": {
+          "symbol": "MU",
+          "mint": "MUxEsUKSMACyw5fZf68wxf5FLnZVhtU9CwH8uNNGay1",
+          "decimals": 6,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        },
+        "Ondo": {
+          "symbol": "MUon",
+          "mint": "Fz9edBpaURPPzpKVRR1A8PENYDEgHqwx5D5th28ondo",
+          "decimals": 9,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        }
+      },
+      "enabled": true
+    },
+    "NKE": {
+      "name": "NIKE, Inc.",
+      "refSymbol": "NKE",
+      "assetType": "public_stock",
+      "exchange": "NYSE",
+      "issuers": {
+        "xStocks": {
+          "symbol": "NKEx",
+          "mint": "XsGYpMvKbVt6ViHqRd7cF3s746dAMFBQWcC49hB9VVP",
+          "decimals": 8,
+          "multiplierMode": "xstocks",
+          "enabled": true
+        },
+        "Backpack": {
+          "symbol": "NKE",
+          "mint": "NKEda5nHhNGgjrE9nDdMvaEmkmJ96qqxzBVZEcKmjSg",
+          "decimals": 6,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        },
+        "Ondo": {
+          "symbol": "NKEon",
+          "mint": "g646pcdG2Rt5DH9WZzL7VVnVDWCCMTTrnktwE74ondo",
+          "decimals": 9,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        }
+      },
+      "enabled": true
+    },
+    "BA": {
+      "name": "The Boeing Company",
+      "refSymbol": "BA",
+      "assetType": "public_stock",
+      "exchange": "NYSE",
+      "issuers": {
+        "xStocks": {
+          "symbol": "BAx",
+          "mint": "XsBcnKnZMsPaerLiUQ4eMFy4Fjysot4RugYXYDjiqCP",
+          "decimals": 8,
+          "multiplierMode": "xstocks",
+          "enabled": true
+        },
+        "Backpack": {
+          "symbol": "BA",
+          "mint": "BArimz1PcKZr8PcPh3tcZ2dg4S7FJLk3cw6R5F8GsHKg",
+          "decimals": 6,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        },
+        "Ondo": {
+          "symbol": "BAon",
+          "mint": "1YVZ4LGpq8CAhpdpm3mgy7GgPb83gJczCpxLUQ3ondo",
+          "decimals": 9,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        }
+      },
+      "enabled": true
+    },
+    "LLY": {
+      "name": "Eli Lilly and Company",
+      "refSymbol": "LLY",
+      "assetType": "public_stock",
+      "exchange": "NYSE",
+      "issuers": {
+        "xStocks": {
+          "symbol": "LLYx",
+          "mint": "Xsnuv4omNoHozR6EEW5mXkw8Nrny5rB3jVfLqi6gKMH",
+          "decimals": 8,
+          "multiplierMode": "xstocks",
+          "enabled": true
+        },
+        "Backpack": {
+          "symbol": "LLY",
+          "mint": "LLYuwZ33keFihgwoxXsBawy31AiRFLFSva32TYq5TvD",
+          "decimals": 6,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        },
+        "Ondo": {
+          "symbol": "LLYon",
+          "mint": "eGGxZwNSfuNKRqQLKaz2hc4QkA2mau7skyxPdj7ondo",
+          "decimals": 9,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        }
+      },
+      "enabled": true
+    },
+    "SPCX": {
+      "name": "Space Exploration Technologies Corporation",
+      "refSymbol": "SPCX",
+      "assetType": "public_stock",
+      "exchange": "NASDAQ",
+      "issuers": {
+        "xStocks": {
+          "symbol": "SPCXx",
+          "mint": "Xs3oZwbHvqis4NYcf4YKWmEia2eC84wSiVrcYcTqpH8",
+          "decimals": 8,
+          "multiplierMode": "xstocks",
+          "enabled": true
+        },
+        "Backpack": {
+          "symbol": "SPCX",
+          "mint": "SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb",
+          "decimals": 6,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        },
+        "Ondo": {
+          "symbol": "SPCXon",
+          "mint": "wzAyQTorWyoVXuJKj2x8EqKEGJpS13z6EWE9z5Aondo",
+          "decimals": 9,
+          "multiplierMode": "one_to_one",
+          "enabled": true
+        }
+      },
+      "enabled": true
+    }
+  }
+}
