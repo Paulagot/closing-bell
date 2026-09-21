@@ -1,0 +1,178 @@
+[
+  {
+    "ticker": "HOOD",
+    "name": "Robinhood Markets, Inc.",
+    "symbol": "HOOD",
+    "mint": "HooDYv5RewLRiMLnEVq3VJqdqxhuE6c5eYvqejMC3e9A",
+    "sourceType": "official_page",
+    "sourceUrl": "https://learn.backpack.exchange/blog/tokenized-robinhood-hood"
+  },
+  {
+    "ticker": "MSTR",
+    "name": "Strategy Inc.",
+    "symbol": "MSTR",
+    "mint": "MSTRdWXMeZxdE8osAQy3fA4rvTY5rgummDSMEx6U7Nz",
+    "sourceType": "official_page",
+    "sourceUrl": "https://learn.backpack.exchange/blog/tokenized-strategy-mstr"
+  },
+  {
+    "ticker": "MU",
+    "name": "Micron Technology, Inc.",
+    "symbol": "MU",
+    "mint": "MUxEsUKSMACyw5fZf68wxf5FLnZVhtU9CwH8uNNGay1",
+    "sourceType": "official_page",
+    "sourceUrl": "https://learn.backpack.exchange/blog/tokenized-micron-mu"
+  },
+  {
+    "ticker": "NKE",
+    "name": "Nike, Inc.",
+    "symbol": "NKE",
+    "mint": "NKEda5nHhNGgjrE9nDdMvaEmkmJ96qqxzBVZEcKmjSg",
+    "sourceType": "official_page",
+    "sourceUrl": "https://learn.backpack.exchange/blog/tokenized-nike-nke"
+  },
+  {
+    "ticker": "SNDK",
+    "name": "Sandisk Corporation",
+    "symbol": "SNDK",
+    "mint": "SNDKbwMUQvZhnLnxLduradgLHG5KrPuKwpnrkkGRhfH",
+    "sourceType": "official_page",
+    "sourceUrl": "https://learn.backpack.exchange/blog/tokenized-sandisk-sndk"
+  },
+  {
+    "ticker": "NBIS",
+    "name": "Nebius Group N.V.",
+    "symbol": "NBIS",
+    "mint": "NBiSF3UaVUFtRzHwAfxyHsBCAZWGEKnMpewAE4oh7BG",
+    "sourceType": "official_page",
+    "sourceUrl": "https://learn.backpack.exchange/blog/tokenized-nebius-group-nbis"
+  },
+  {
+    "ticker": "MRVL",
+    "name": "Marvell Technology, Inc.",
+    "symbol": "MRVL",
+    "mint": "MRVLSjkR2ceUBukujaD3xCyHP1H3B2SzpsNTZF546jo",
+    "sourceType": "official_page",
+    "sourceUrl": "https://learn.backpack.exchange/blog/tokenized-marvell-technology-mrvl"
+  },
+  {
+    "ticker": "LLY",
+    "name": "Eli Lilly and Company",
+    "symbol": "LLY",
+    "mint": "LLYuwZ33keFihgwoxXsBawy31AiRFLFSva32TYq5TvD",
+    "sourceType": "official_page",
+    "sourceUrl": "https://learn.backpack.exchange/blog/tokenized-eli-lilly-lly"
+  },
+  {
+    "ticker": "AMC",
+    "name": "AMC Entertainment Holdings, Inc.",
+    "symbol": "AMC",
+    "mint": "AMC1qwR9KhiyrQBRPrxnfo4JfMeMZqEBvt5tgTytNNoc",
+    "sourceType": "official_page",
+    "sourceUrl": "https://learn.backpack.exchange/blog/tokenized-amc-entertainment-amc"
+  },
+  {
+    "ticker": "HTZ",
+    "name": "Hertz Global Holdings, Inc.",
+    "symbol": "HTZ",
+    "mint": "HTZsLG4zqaNvWMwXSLHH3GG5KyJpKwpBRsKVdMG6hvzP",
+    "sourceType": "official_page",
+    "sourceUrl": "https://learn.backpack.exchange/blog/tokenized-hertz-global-holdings-htz"
+  },
+  {
+    "ticker": "INTC",
+    "name": "Intel Corporation",
+    "symbol": "INTC",
+    "mint": "iNTCy1qTsUEZQe3DSocLz1ZXXai34Gdw8THQh5rxFaF",
+    "sourceType": "secondary_verified",
+    "sourceUrl": "https://pump.fun/docs/custom-pairs"
+  },
+  {
+    "ticker": "SPCX",
+    "name": "SpaceX",
+    "symbol": "SPCX",
+    "mint": "SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb",
+    "sourceType": "secondary_verified",
+    "sourceUrl": "https://pump.fun/docs/custom-pairs"
+  },
+  {
+    "ticker": "BA",
+    "name": "The Boeing Company",
+    "symbol": "BA",
+    "mint": "BArimz1PcKZr8PcPh3tcZ2dg4S7FJLk3cw6R5F8GsHKg",
+    "sourceType": "secondary_verified",
+    "sourceUrl": "https://pump.fun/docs/custom-pairs"
+  },
+  {
+    "ticker": "IBM",
+    "name": "IBM",
+    "symbol": "IBM",
+    "mint": "BMKdM4yUxX12moFqVk195k7coMbaybd4RUKCUdm7D1Sk",
+    "sourceType": "secondary_verified",
+    "sourceUrl": "https://pump.fun/docs/custom-pairs"
+  },
+  {
+    "ticker": "JNJ",
+    "name": "Johnson & Johnson",
+    "symbol": "JNJ",
+    "mint": "JNJg1znKdF712Phe7L7z52AATAvEjEytBdN2w8Lnh1Y",
+    "sourceType": "secondary_verified",
+    "sourceUrl": "https://pump.fun/docs/custom-pairs"
+  },
+  {
+    "ticker": "LMT",
+    "name": "Lockheed Martin Corporation",
+    "symbol": "LMT",
+    "mint": "LMT3i1BHgixFqPUgcyteJhnEz2dpy9i3cYy4pi9BoeV",
+    "sourceType": "secondary_verified",
+    "sourceUrl": "https://pump.fun/docs/custom-pairs"
+  },
+  {
+    "ticker": "LULU",
+    "name": "Lululemon Athletica",
+    "symbol": "LULU",
+    "mint": "LULUmT9VMttkfAJE236LXJcYJ2tTP7nunrSWR5G1BdS",
+    "sourceType": "secondary_verified",
+    "sourceUrl": "https://pump.fun/docs/custom-pairs"
+  },
+  {
+    "ticker": "BABA",
+    "name": "Alibaba Group",
+    "symbol": "BABA",
+    "mint": "BABANGA4JE7Kkam4nTrALAwAVgsNJUuFJnnkF7S16BZp",
+    "sourceType": "secondary_verified",
+    "sourceUrl": "https://pump.fun/docs/custom-pairs"
+  },
+  {
+    "ticker": "COST",
+    "name": "Costco Wholesale Corporation",
+    "symbol": "COST",
+    "mint": "CZEB3WNZuF2Yz1z2H81RcCk8T7fsw82KB33zqamASVsg",
+    "sourceType": "secondary_verified",
+    "sourceUrl": "https://pump.fun/docs/custom-pairs"
+  },
+  {
+    "ticker": "DELL",
+    "name": "Dell Technologies",
+    "symbol": "DELL",
+    "mint": "DELL2aRKQz7DMq5DrKLtkn47ZCnbxXPZXrSGbkmd13wy",
+    "sourceType": "secondary_verified",
+    "sourceUrl": "https://pump.fun/docs/custom-pairs"
+  },
+  {
+    "ticker": "DJT",
+    "name": "Trump Media & Technology Group",
+    "symbol": "DJT",
+    "mint": "DJTu7vi8norVzdVAffgvb39VP7wjKeTsgaMBJrzfxvoF",
+    "sourceType": "secondary_verified",
+    "sourceUrl": "https://pump.fun/docs/custom-pairs"
+  },
+  {
+    "ticker": "HIMS",
+    "name": "Hims & Hers Health",
+    "symbol": "HIMS",
+    "mint": "HiMSSzzwkZkrXJ4PGVJRdtfLaANeAztjjcgk5Dxe7Lwx",
+    "sourceType": "secondary_verified",
+    "sourceUrl": "https://pump.fun/docs/custom-pairs"
+  }
+]
