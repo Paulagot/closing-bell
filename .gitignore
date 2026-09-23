@@ -28,3 +28,10 @@ Thumbs.db
 # Misc
 *.tsbuildinfo
 .railway/
+
+# Temporary archives and backups
+*.zip
+*.tar
+*.tar.gz
+*.tmp
+*.bak

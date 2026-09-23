@@ -1031,20 +1031,28 @@ export async function fetchV2OrderQuote(
    * Since this is quote-only, transaction === null
    * is expected because no taker was supplied.
    */
-  if (
-    !response.ok
-  ) {
 
-    const message =
-      data?.errorMessage ??
-      data?.error ??
-      `Jupiter V2 order failed with HTTP ${response.status}`;
+if (!response.ok) {
+  const message =
+    data?.errorMessage ??
+    data?.error ??
+    data?.message ??
+    `Jupiter V2 order failed with HTTP ${response.status}`;
 
-    throw new Error(
-      message
-    );
+  console.error("[jupiter-v2] QUOTE FAILED", {
+    httpStatus: response.status,
+    inputMint,
+    outputMint,
+    amountAtomic,
+    errorCode: data?.errorCode ?? null,
+    errorMessage: message,
+    responseBody: data,
+  });
 
-  }
+  throw new Error(
+    `Jupiter V2 HTTP ${response.status}: ${String(message)}`
+  );
+}
 
 
   const routePlan =
