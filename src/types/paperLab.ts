@@ -5,27 +5,70 @@ export type PaperSignalStatus = "candidate" | "watch" | "no_setup";
 export type PaperTradeStatus = "open" | "closed";
 export type PaperTradeExitReason = "target" | "stop" | "timeout" | "manual";
 export type PaperTradeDirection = "long" | "short";
-export type PaperStrategyType = "convergence" | "momentum";
+
+/**
+ * Keep the legacy names because historical JSON already contains them.
+ * V5 opens NEW trades only for the three research strategies below.
+ */
+export type PaperStrategyType =
+  | "convergence"
+  | "momentum"
+  | "extreme_momentum"
+  | "discount_recovery"
+  | "wrapper_lag"
+  | "drift_reversal";
 
 export interface PaperStrategyRules {
   version: string;
   notionalUsd: number;
+
   targetPct: number;
   secondaryTargetPct?: number;
   maxQuoteImpactPct?: number;
   stopPct: number | null;
   maxHoldHours: number;
+
+  /**
+   * In V5 this cap is applied independently to EACH active long strategy.
+   * It is no longer one shared long cap across all strategy families.
+   */
   maxNewLongTradesPerDay: number;
+
+  /** Retained for backwards compatibility. V5 opens no new shorts. */
   maxNewShortTradesPerDay: number;
+
   minPersistentCaptures: number;
-  minLiquidityUsd: number; // indicative Jupiter liquidity, not route capacity
+  minLiquidityUsd: number;
   cooldownHours: number;
-  requireMarketOpenForEntries: boolean; // convergence only in V3; legacy name retained
+
+  /** Legacy convergence research settings. */
+  requireMarketOpenForEntries: boolean;
+
+  /** Legacy momentum research settings. */
   momentumRequireMarketOpen: boolean;
   momentumLookbackCaptures: number;
   momentumTrendSteps: number;
   momentumMinAlignedSteps: number;
   momentumMaxBreakEvenPct: number;
+
+  /** V5 Strategy A: Extreme Momentum. */
+  extremeMomentumMin2hPct: number;
+  extremeMomentumMaxBreakEvenPct: number;
+
+  /** V5 Strategy B: Discount Recovery. */
+  discountRecoveryMaxBuyGapPct: number;
+  discountRecoveryMinNarrowing1hPct: number;
+  discountRecoveryMaxBreakEvenPct: number;
+
+  /** V5 Strategy C: Wrapper Lag. */
+  wrapperLagMaxLag1hPct: number;
+  wrapperLagMaxBreakEvenPct: number;
+
+  /** V5 Strategy D: Pre-open Drift Reversal, long-only research. */
+  driftReversalMaxBuyGapPct: number;
+  driftReversalMaxBreakEvenPct: number;
+  driftReversalStartMinutesEt: number;
+  driftReversalEndMinutesEt: number;
 }
 
 export interface PaperExecutionSnapshot {
@@ -55,11 +98,44 @@ export interface PaperMomentumFeatures {
   wrapperTrendStepsAvailable: number;
 }
 
+export interface PaperExperimentalSignalState {
+  rawEligible: boolean;
+  signalStatus: PaperSignalStatus;
+  signalReasons: string[];
+}
+
+export interface PaperExperimentalFeatures {
+  /** Current wrapper return minus reference-stock return over ~1 hour. */
+  wrapperLag1hPct: number | null;
+
+  /** BUY gap from approximately four 15-minute captures ago. */
+  buyGap1hAgoPct: number | null;
+
+  /**
+   * Percentage-point recovery toward zero for a negative gap.
+   * Example: -2.0% -> -1.1% = +0.9pp narrowing.
+   */
+  gapNarrowing1hPct: number | null;
+
+  extremeMomentum: PaperExperimentalSignalState;
+  discountRecovery: PaperExperimentalSignalState;
+  wrapperLag: PaperExperimentalSignalState;
+  driftReversal: PaperExperimentalSignalState;
+}
+
 /** Research-only hypothetical outcome. Future $1,000 effective SELL/BUY prices
  * are proxies, NOT executable exact-quantity exit quotes or realised P&L. */
 export interface PaperCandidateOutcome {
   direction: PaperTradeDirection;
-  kind: "sustained_momentum" | "gap_cross" | "gap_narrowing" | "wrapper_turn";
+  kind:
+    | "sustained_momentum"
+    | "gap_cross"
+    | "gap_narrowing"
+    | "wrapper_turn"
+    | "extreme_momentum"
+    | "discount_recovery"
+    | "wrapper_lag"
+    | "drift_reversal";
   enteredAt: number;
   entryEffectivePrice: number;
   firstTargetPct: 1 | 1.2 | null;
@@ -72,7 +148,6 @@ export interface PaperCandidateOutcome {
   terminalPct: number | null;
   lastSeenAt: number;
   status: "tracking" | "complete";
-  /** New 48h research only; older V4.1 candidates retain their original 4h meaning. */
   at4hPct?: number | null;
   at24hPct?: number | null;
   at48hPct?: number | null;
@@ -115,8 +190,7 @@ export interface PaperLabObservation {
   longTheoreticalConvergencePct: number | null;
   shortTheoreticalConvergencePct: number | null;
 
-  // Convergence strategy. These field names are retained for backward
-  // compatibility with the original V1 long/short observation files.
+  // Legacy convergence research fields retained for historical compatibility.
   longRawEligible: boolean;
   longPersistentCaptures: number;
   longSignalStatus: PaperSignalStatus;
@@ -127,6 +201,7 @@ export interface PaperLabObservation {
   shortSignalStatus: PaperSignalStatus;
   shortSignalReasons: string[];
 
+  // Legacy momentum research fields retained for historical compatibility.
   momentum: PaperMomentumFeatures;
   momentumLongRawEligible: boolean;
   momentumLongPersistentCaptures: number;
@@ -137,8 +212,12 @@ export interface PaperLabObservation {
   momentumShortSignalStatus: PaperSignalStatus;
   momentumShortSignalReasons: string[];
 
+  /** V5 parallel-strategy research fields. Optional so old observations still load. */
+  experimental?: PaperExperimentalFeatures;
+
   strategyVersion: string;
   researchCandidates?: PaperCandidateOutcome[];
+
   discovery?: {
     gapCross: "negative_to_positive" | "positive_to_negative" | null;
     gapReferenceFresh: boolean;
@@ -199,6 +278,14 @@ export interface PaperTrade {
   entryLiquidityUsd: number | null;
   entryMarketOpen: boolean;
   entryMomentum: PaperMomentumFeatures | null;
+
+  /** V5 entry diagnostics. Optional for backwards compatibility with old trades. */
+  entryWrapperMove1hPct?: number | null;
+  entryWrapperMove2hPct?: number | null;
+  entryBenchmarkMove1hPct?: number | null;
+  entryWrapperLag1hPct?: number | null;
+  entryGap1hAgoPct?: number | null;
+  entryGapNarrowing1hPct?: number | null;
 
   currentExitUsd: number | null;
   currentPnlUsd: number | null;
