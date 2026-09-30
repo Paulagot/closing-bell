@@ -69,6 +69,8 @@ export interface PaperStrategyRules {
   driftReversalMaxBreakEvenPct: number;
   driftReversalStartMinutesEt: number;
   driftReversalEndMinutesEt: number;
+  driftReversalWindowStartEt: string;
+driftReversalWindowEndEt: string;
 }
 
 export interface PaperExecutionSnapshot {
