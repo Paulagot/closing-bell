@@ -169,7 +169,15 @@ export async function readPaperTrades(): Promise<PaperTrade[]> {
       return {
         ...trade,
         version: 3,
-        strategyType: trade?.strategyType === "momentum" ? "momentum" : "convergence",
+      strategyType:
+  trade?.strategyType === "momentum" ||
+  trade?.strategyType === "convergence" ||
+  trade?.strategyType === "extreme_momentum" ||
+  trade?.strategyType === "discount_recovery" ||
+  trade?.strategyType === "wrapper_lag" ||
+  trade?.strategyType === "drift_reversal"
+    ? trade.strategyType
+    : "convergence",
         direction: trade?.direction === "short" ? "short" : "long",
         entryMomentum: trade?.entryMomentum ?? null,
         strategyRules: {
